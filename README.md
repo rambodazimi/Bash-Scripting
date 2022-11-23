@@ -36,3 +36,20 @@ If a tar file with the same name already exists, your script should ask the user
 
 <h2>Part 2: Find the difference between directories</h2>
 Description:
+
+We will now work on a script that compares the text files between two directories, for example the source files in a directory to files with the same name in a backup directory.
+
+Makesurethatyourscriptstartswithasha-bangtoexecuteitusingbashandisfollowedbyasmallcomment section that includes your name, department and email id (format of this comment section is up to you). The script should also have additional comments for the important part of the code.
+
+Create a script called deltad.bash. This script will take two directories as input parameters, iterate over the lists of files, and report files which are either present in one directory but missing in the other, or present in both directories but differ in content.
+
+The actual ordering of files in the above output is not important. Your script MUST NOT consider subdi- rectories or files therein. The script should work with both relative and absolute paths. This also means the the output format displayed must contain a relative or absolute path depending on what the original argument was.
+
+If the script does not receive 2 input parameters, it should print an error message, display the usage, and exit with error code 1.
+
+The script should verify that both input parameters are directories, and that they are different directories. Otherwise, it should print an error message, display the usage, and exit with error code 2.
+
+The script should function even if one or both of the input directories are empty.
+
+If no differences are found between the directories, the script should exit with error code 0.
+Otherwise (including missing files), it should exit with error code 3.
